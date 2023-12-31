@@ -1,0 +1,22 @@
+int countDigits(int n)
+{
+    // Write your code here.
+    int answer = 0;
+    int val = n;
+    while (n != 0)
+    {
+        int lastdigit = n % 10;
+        if (lastdigit == 0)
+        {
+            n /= 10;
+            continue;
+        }
+        if (val % lastdigit == 0)
+        {
+            answer++;
+        }
+        n = n / 10;
+    }
+
+    return answer;
+}
