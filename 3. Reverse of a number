@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int reverse(int n){
+    int answer=0;
+    while (n!=0)
+    {
+        int last_digit=n%10;
+        answer=answer*10+last_digit;
+        n=n/10;
+    }
+    return answer;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<reverse(n);
+    return 0;
+}
