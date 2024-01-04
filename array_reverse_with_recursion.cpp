@@ -44,7 +44,7 @@ void check_palindrome(string alvi, int i)
 {
 	int n = alvi.size();
 
-	if (alvi[i - 1] == alvi[n - i])
+	if (i > n / 2)
 	{
 		cout << "YES";
 		return;
@@ -66,4 +66,3 @@ int main()
 	check_palindrome(alvi, 1);
 	return 0;
 }
-
