@@ -33,3 +33,37 @@ int main()
 	reverse(arr, 1, n);
 	return 0;
 }
+
+
+//also if i wanna ccheck palindrone
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void check_palindrome(string alvi, int i)
+{
+	int n = alvi.size();
+
+	if (alvi[i - 1] == alvi[n - i])
+	{
+		cout << "YES";
+		return;
+	}
+
+	if (alvi[i - 1] != alvi[n - i])
+	{
+		cout << "NO";
+		return;
+	}
+	i++;
+	check_palindrome(alvi, i);
+}
+
+int main()
+{
+	string alvi;
+	cin >> alvi;
+	check_palindrome(alvi, 1);
+	return 0;
+}
+
